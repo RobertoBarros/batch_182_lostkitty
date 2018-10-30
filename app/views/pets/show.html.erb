@@ -1,0 +1,16 @@
+<h1>Pets Info</h1>
+<p><strong>Category</strong>: <%= @pet.category %></p>
+<p><strong>Color</strong>: <%= @pet.color %></p>
+<p><strong>Description</strong>: <%= @pet.description %></p>
+<p><strong>Found at</strong>: <%= @pet.found_at %></p>
+<p><strong>Rescued:</strong>: <%= @pet.rescued %></p>
+
+<br>
+<br>
+<%= link_to 'Back to all pets', pets_path, class: 'btn btn-default' %>
+<br>
+<br>
+<%= link_to 'Edit', edit_pet_path(@pet), class: 'btn btn-info'%>
+<br>
+<br>
+<%= link_to 'Exclude', pet_path(@pet), method: 'delete', data:{ confirm: 'Are you sure?'}, class: 'btn btn-danger'%>
